@@ -14,11 +14,13 @@ export class StudentListComponent implements OnInit {
 
   constructor(private httpService:HttpService){}
   ngOnInit(){
+    this.findAll()
+  }
+
+  findAll(){
     this.httpService.findAll().subscribe((data)=>{
       this.students = data
-      // тут нужно проверить переход данных и их констукцию в json
-      //сделал как у меня в json файле students.json
-      console.log(this.students)
+      //console.log(this.students)
     })
   }
 
