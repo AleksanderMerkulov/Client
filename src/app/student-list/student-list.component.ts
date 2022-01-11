@@ -9,13 +9,13 @@ import { HttpService } from '../servicies/http.service';
   providers:[HttpService]
 })
 export class StudentListComponent implements OnInit {
-  
+
   students:Students[]=[]
 
   constructor(private httpService:HttpService){}
   ngOnInit(){
-    this.httpService.findAll().subscribe((data:any)=>{
-      this.students = data["studentList"]
+    this.httpService.findAll().subscribe((data)=>{
+      this.students = data
       // тут нужно проверить переход данных и их констукцию в json
       //сделал как у меня в json файле students.json
       console.log(this.students)
@@ -26,8 +26,8 @@ export class StudentListComponent implements OnInit {
     this.httpService.findById(id)
   }
 
-  save(){
-    this.httpService.save()
+  save(student:Students){
+    this.httpService.save(student)
   }
 
   delete(id:number){

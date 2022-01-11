@@ -13,9 +13,9 @@ export class HttpService {
     return this.http.get<Students[]>('api/v1/users')
   }
   findById(id:number){
-    return this.http.get<Students[]>('api/v1/users/$(id)')
+    return this.http.get<Students>('api/v1/users/$(id)')
   }
-  save(){
+  save(student:Students){
     return this.http.post('api/v1/users', Students)
   }
   delete(id:number){
