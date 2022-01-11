@@ -1,0 +1,17 @@
+<table>
+    <tr>
+      <td>id</td>
+      <td>name</td>
+      <td>age</td>
+      <td>changes</td>
+    </tr>
+    <tr *ngFor='let student of students'>
+      <td>{{student?.id}}</td>
+      <td>{{student?.name}}</td>
+      <td>{{student?.age}}</td>
+      <td>
+          <a>change</a>
+          <a (click)='delete(student.id)'>delete</a>
+      </td>
+    </tr>
+  </table>
