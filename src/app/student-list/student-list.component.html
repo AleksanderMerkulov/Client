@@ -1,9 +1,10 @@
-<table>
+<h4>Таблица клиентов</h4>
+<table class="table">
     <tr>
-      <td>id</td>
-      <td>name</td>
-      <td>age</td>
-      <td>changes</td>
+      <td class="col">id</td>
+      <td class="col">name</td>
+      <td class="col">age</td>
+      <td class="col">changes</td>
     </tr>
     <tr *ngFor='let student of students'>
       <td>{{student?.id}}</td>

@@ -28,10 +28,6 @@ export class StudentListComponent implements OnInit {
     this.httpService.findById(id)
   }
 
-  save(student:Students){
-    this.httpService.save(student)
-  }
-
   delete(id:number){
     this.httpService.delete(id)
   }
