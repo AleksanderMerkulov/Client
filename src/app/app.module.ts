@@ -7,6 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentAdderComponent } from './student-adder/student-adder.component';
+import { StudentFindByIdComponent } from './student-find-by-id/student-find-by-id.component';
 
 const appRouters:Routes=[
   {path:'', component:StudentListComponent},
@@ -17,7 +18,8 @@ const appRouters:Routes=[
   declarations: [
     AppComponent,
     StudentListComponent,
-    StudentAdderComponent
+    StudentAdderComponent,
+    StudentFindByIdComponent
   ],
   imports: [
     BrowserModule,

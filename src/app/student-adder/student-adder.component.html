@@ -2,11 +2,12 @@
 <div>
     <div>
         <label>Name</label>
-        <input  type="text">
+        <input [(ngModel)]='students.name'>
     </div>
     <div>
         <label>Age</label>
-        <input>
+        <input [(ngModel)]='students.age'>
     </div>
+    <button class="btn btn-primary" type="submit" (click)='save()'>Добавить студента</button>
 </div>
 

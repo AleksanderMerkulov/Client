@@ -11,8 +11,7 @@
       <td>{{student?.name}}</td>
       <td>{{student?.age}}</td>
       <td>
-          <a>change</a>
-          <a (click)='delete(student.id)'>delete</a>
+          <a class="btn btn-primary" (click)='delete(student.id)'><i class="bi bi-backspace-fill"></i>delete</a>
       </td>
     </tr>
   </table>

@@ -9,15 +9,18 @@ import { HttpService } from '../servicies/http.service';
 })
 export class StudentAdderComponent implements OnInit {
 
-  students:Students[]=[]
+  students:Students= new Students(4,'',0)
 
   constructor(public httpService:HttpService) { }
 
   ngOnInit(): void {
   }
 
-  save(student:Students){
-    this.httpService.save(student)
+  save(){
+    this.httpService.save(this.students)
+    .subscribe((data:any)=>{
+      this.students=data
+    })
   }
 
 }
